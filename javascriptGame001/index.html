@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title> JavaScript Game </title> 
+</head>
+<body>
+	<h1> My Javascript Rock Paper Scissors Game </h1>
+	<script>
+var userChoice = prompt("Do you choose rock, paper or scissors?"); //assigned the prompt command to varible userChoice
+var computerChoice = Math.random(); // assigns varible computerChoice to a random number from 0 - 1 which is what Math.random() does.
+
+// if the computerChoice is less than 0.34 then its rock, else if it's less than or equal to 0.67 its paper, else is scissors.
+if (computerChoice < 0.34) {
+	computerChoice = "rock";
+} else if(computerChoice <= 0.67) {
+	computerChoice = "paper";
+} else {
+	computerChoice = "scissors";
+} 
+
+console.log("Computer: " + computerChoice); // log what the computer has chosen
+
+var compare = function(choice1, choice2){
+    if(choice1 === choice2){
+        return "The result is a tie!";
+    } 
+    
+    else if(choice1 === "rock"){
+        if(choice2 === "scissors"){
+            return "rock wins";
+        } else {
+            return "paper wins";
+        }
+    } 
+    
+    else if(choice1 === "paper"){
+        if(choice2 === "rock") {
+        return "paper wins";
+        } else {
+        return "scissors wins";
+        }        
+    } 
+    
+    else if(choice1 === "scissors"){
+        if(choice2 === "rock"){
+        return "rock wins";
+        } else {
+        return "scissors wins"
+        }        
+    }
+};
+		
+//calling the function with the variables as parameters userChoice and computerChoice
+compare(userChoice, computerChoice); 
+</script>
+</body>
+</html>

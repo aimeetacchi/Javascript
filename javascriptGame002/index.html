@@ -1,0 +1,23 @@
+<script>
+var slaying = true; //setting this varible to true
+var youHit = Math.floor(Math.random()); //selects a random number from 0 - 1 then rounds it up with math.floor
+var damageThisRound = Math.floor(Math.random()*5 + 1); 
+var totalDamage = 0;
+
+while(slaying) {
+    if(youHit = 1){
+        console.log("You hit the dragon!");
+        totalDamage += damageThisRound;
+        if(totalDamage >= 4){
+            console.log("You slew the Dragon!")
+            slaying = false;
+        } else {
+            youHit = Math.floor(Math.random()* 2);
+        }
+    } else {
+        console.log("Dragon defeated you!");
+    }
+    slaying = false;
+}
+
+</script>
