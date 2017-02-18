@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Javascript </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!-- CSS file -->
+	<link href='style.css' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<!-- Javascript file -->
+	<script href='js/javascript.js'></script>
+
+	<script>
+		var myVariable = "This is written by Javascript that is from my variable";
+		var mySum = (4*5)+543
+		var myBoolen = "Cat" == "Cat"
+	</script>
+</head>
+
+<body>
+	<div id="content">
+		<h1>Javascript Functions</h1>
+
+		<script>
+			//document.write("<p>"+myVariable+"</p><p>This is my sum "+mySum+"</p>");
+			//document.write("<p>This is a boolen which is - "+myBoolen+"</p>")
+		</script>
+
+		<p> My first Javascript Function </p>
+		<p id="par2"> Watch this line of text!!! But first type something below in the box. </p>
+		<input type="text" id="myInput" placeholder="enter something in here" value="">
+		<button class="myButton" onclick="myFunction();"> Enter </button>
+			
+<script>
+	function myFunction(){
+	document.getElementById("par2").innerHTML = document.getElementById("myInput").value ;
+	}
+</script>
+	</div>
+</body>
+</html>

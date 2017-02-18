@@ -1,0 +1,42 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+	font-size: 30px;
+	color: green;
+}
+
+p {
+	font-size: 18px;
+
+}
+
+#content {
+	background: #efefef;
+	width: 50%;
+	margin: 0 auto;
+	padding: 10px 20px;
+	color: blue;
+}
+
+.myButton {
+	background: #7683f7;
+	background: -webkit-linear-gradient(#2030bf, #7683f7); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#2030bf, #7683f7);/* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#2030bf, #7683f7); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#2030bf, #7683f7); /* Standard syntax */
+	color: #fff;
+	border: 0;
+	padding: 10px 35px;
+	transition: all .5s ease;
+}
+
+.myButton:hover {
+	background: #75149b;
+	background: -webkit-linear-gradient(#75149b, #a43fcc); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#75149b, #a43fcc);/* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#75149b, #a43fcc); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#75149b, #a43fcc); /* Standard syntax */
+	
+	}
