@@ -35,12 +35,11 @@
 	</header>
 	<div class="container-fluid">
 		<div id="growme" class="size m-5"></div>
-		<h1 class="text-center mt-2">My expanding div with JS</h1>
-		<p class="text-center">All you have to do to see the magic is click the button!</p>
+		<h1 class="text-center mt-2">My expanding and shrinking div with JS</h1>
+		<p class="text-center">I hope you like my magic buttons. All you have to do to see the magic is click the buttons below. Enjoy!</p>
 		 <div class="text-center">
 		 	<button type="button" id="myButton" class="btn btn-primary">Grow Div</button>
-      <button type="button" id="myButtonTwo" class="btn btn-primary">Shrink Div</button>
-
+      		<button type="button" id="myButtonTwo" class="btn btn-primary">Shrink Div</button>
 		 </div>
 	</div>
 	<footer class="bg-info text-white mt-5 p-5">
@@ -68,7 +67,7 @@
 
       function shrinkMe() {
         console.log(shrinkbutton);
-        mygrowingdiv.style.width = 2 + "%";
+        mygrowingdiv.style.width = 2 % countup + "%";
       }
 
 
