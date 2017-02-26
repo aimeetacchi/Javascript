@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   </head>
   <style>
-  	#growme {
-  		background-color: blue;
-  		width: 2%;
-  		height: 100px;
-  		transition: all ease 0.2;
-  		}
+      .size {
+        background-color: blue;
+        width: 1%;
+        height: 100px;
+        transition: all ease 1.5s;
+      }
 
   </style>
   <body>
@@ -34,11 +34,13 @@
 		</nav>
 	</header>
 	<div class="container-fluid">
-		<div id="growme" class="m-5"></div>
+		<div id="growme" class="size m-5"></div>
 		<h1 class="text-center mt-2">My expanding div with JS</h1>
 		<p class="text-center">All you have to do to see the magic is click the button!</p>
 		 <div class="text-center">
-		 	<button type="button" class="btn btn-primary">Click me!</button>
+		 	<button type="button" id="myButton" class="btn btn-primary">Grow Div</button>
+      <button type="button" id="myButtonTwo" class="btn btn-primary">Shrink Div</button>
+
 		 </div>
 	</div>
 	<footer class="bg-info text-white mt-5 p-5">
@@ -51,12 +53,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script>
 
-    	const listen = addEventListener('click', growme);
+      var countup = 0;
 
-    	function growme() {
-    		const mygrowingdiv = document.getElementById("growme")
+    	const mygrowingdiv = document.getElementById("growme")
+      const listen = myButton.addEventListener('click', growMe);
+      const listentwo = myButtonTwo.addEventListener('click', shrinkMe);
+      const shrinkbutton = document.getElementById("myButtonTwo")
+
+    	function growMe() {
     		console.log (mygrowingdiv);
-    	}
+        countup = countup + 1;
+        mygrowingdiv.style.width = 20 * countup + "%";
+      }
+
+      function shrinkMe() {
+        console.log(shrinkbutton);
+        mygrowingdiv.style.width = 2 + "%";
+      }
+
 
     </script>
   </body>
