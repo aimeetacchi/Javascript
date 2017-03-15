@@ -1,0 +1,41 @@
+/* -----------------------------------------------------------------------------
+ * Variables
+ * -------------------------------------------------------------------------- */
+$background-blue: blue;
+$fullwidth: 100%;
+
+
+/* -----------------------------------------------------------------------------
+ * Base Styles
+ * -------------------------------------------------------------------------- */
+
+.size {
+  background-color: $background-blue;
+  width: 0;
+  height: 100px;
+  margin: 5% 0;
+  transition: all ease 1.5s;
+}
+
+.content-container {
+	margin-top: 2%;
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin: 0 auto;
+	
+	section {
+		flex-basis: 30%;
+
+		p {
+			font-size: 22px;
+			line-height: 1.1;
+		}
+
+		img {
+			width: $fullwidth;
+		}
+	}
+
+	
+}
