@@ -21,14 +21,14 @@ gulp.task('compileSass', function() {
 });
 
 gulp.task("build", ['compileSass'], function(){
-	return gulp.src(["css/appliation.css", "js/app.js", "index.html"], { base: './'})
+	return gulp.src(["css/appliation.css", "js/app.js"], { base: './'})
 	.pipe(gulp.dest('dist'));
 });
 
 gulp.task('browser-sync', ['build'], function() {
     browserSync.init({
         server: {
-            baseDir: "./dist/"
+            baseDir: "./"
         }
     });
 
