@@ -2,7 +2,8 @@
 
 var gulp = require('gulp'),
   concat = require('gulp-concat'),
-	sass = require('gulp-sass');
+	sass = require('gulp-sass'),
+	browserSync = require('browser-sync').create();
 
 /*gulp.task("concatScripts", function() {
 	gulp.src([
@@ -24,12 +25,18 @@ gulp.task("build", ['compileSass'], function(){
 	.pipe(gulp.dest('dist'));
 });
 
-gulp.task('watch', ['build'], function() {
+gulp.task('browser-sync', ['build'], function() {
+    browserSync.init({
+        server: {
+            baseDir: "./dist/"
+        }
+    });
+
 	gulp.watch('scss/*.scss', ['compileSass']);
 	gulp.watch('js/*.js', ['build']);
 	gulp.watch('*.html', ['build']);
 });
 
-gulp.task("default", ['watch']);
+gulp.task("default", ['browser-sync']);
 
 
