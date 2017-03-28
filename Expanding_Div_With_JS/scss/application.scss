@@ -1,13 +1,22 @@
 /* -----------------------------------------------------------------------------
  * Variables
  * -------------------------------------------------------------------------- */
-$background-blue: blue;
+ // COLOURS
+$background-blue: purple;
+$white-text: white;
+
+// WIDTHS
 $fullwidth: 100%;
 
 
 /* -----------------------------------------------------------------------------
  * Base Styles
  * -------------------------------------------------------------------------- */
+
+body { 
+	background-color: yellow;
+	color: $white-text;
+}
 
 .size {
   background-color: $background-blue;
