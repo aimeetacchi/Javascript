@@ -2,7 +2,8 @@
  * Variables
  * -------------------------------------------------------------------------- */
  // COLOURS
-$background-blue: purple;
+$background-black: #000000;
+$background-blue: #6666ff;
 $white-text: white;
 
 // WIDTHS
@@ -14,8 +15,16 @@ $fullwidth: 100%;
  * -------------------------------------------------------------------------- */
 
 body { 
-	background-color: green;
+	background-color: purple;
 	color: $white-text;
+}
+
+.hero {
+	background-image: url("http://warrengroom.com/wp-content/uploads/2016/08/Free-Unsplash-Stock-Imagery-August-27th-2016-2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 30vw;
 }
 
 .size {
@@ -32,7 +41,10 @@ body {
 	justify-content: space-between;
 	width: 80%;
 	margin: 0 auto;
-	
+	@media screen and (max-width: 460px){
+		display: block;
+	}
+
 	section {
 		flex-basis: 30%;
 
