@@ -1,0 +1,40 @@
+/* -----------------------------------------------------------------------------
+ * Variables
+ * -------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+ * Base Styles
+ * -------------------------------------------------------------------------- */
+body {
+  background-color: purple;
+  color: white; }
+
+.hero {
+  background-image: url("http://warrengroom.com/wp-content/uploads/2016/08/Free-Unsplash-Stock-Imagery-August-27th-2016-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30vw; }
+
+.size {
+  background-color: #6666ff;
+  width: 0;
+  height: 100px;
+  margin: 5% 0;
+  transition: all ease 1.5s; }
+
+.content-container {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto; }
+  @media screen and (max-width: 460px) {
+    .content-container {
+      display: block; } }
+  .content-container section {
+    flex-basis: 30%; }
+    .content-container section p {
+      font-size: 22px;
+      line-height: 1.1; }
+    .content-container section img {
+      width: 100%; }
