@@ -1,24 +1,33 @@
-  var widthsize = 0;
+// --- Growing Div Script --- //
+var widthsize = 0;
+var mygrowingdiv = document.getElementById("growme");
 
-	const mygrowingdiv = document.getElementById("growme")
-  const listen = myButton.addEventListener('click', growMe);
-  const listentwo = myButtonTwo.addEventListener('click', shrinkMe);
-  const shrinkbutton = document.getElementById("myButtonTwo")
+var listen = document.getElementById("myButton");
+var listenTwo = document.getElementById("myButtonTwo");
 
-	function growMe() {
-    console.log(widthsize);
+if (listen){
+    listen.addEventListener('click', function(){
+             
     if (widthsize === 100) {
       widthsize = 0;
     } else {
-		console.log (mygrowingdiv);
-	widthsize = widthsize + 20;
-  }
+      widthsize = widthsize + 20;
+    }
     mygrowingdiv.style.width = widthsize + "%";
-  }
 
-  function shrinkMe() {
-    if (widthsize > 0) {
-  	widthsize = widthsize - 20;
-  }
-    mygrowingdiv.style.width = widthsize + "%";
-  }
+  });
+};
+
+if (listenTwo) {
+  listenTwo.addEventListener('click', function(){
+
+      if (widthsize > 0) {
+        widthsize = widthsize - 20;
+      }
+
+      mygrowingdiv.style.width = widthsize + "%";
+    
+  });
+}
+
+ 
