@@ -11,7 +11,7 @@ $(document).ready(function(){
 		} else {
 			$.ajax({
 				type: "POST",
-				url:"../shoutbox.php",
+				url:"./shoutbox.php",
 				data: dataString,
 				cache: false,
 				success: function(html){
